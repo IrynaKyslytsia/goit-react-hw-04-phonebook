@@ -14,7 +14,7 @@ export const App = () => {
 
   useEffect(() => {
     window.localStorage.setItem('contacts', JSON.stringify(contacts))
-  });
+  }, [contacts]);
 
   const addContact = (name, number) => {
     if (contacts.find(contact => contact.name === name)) {
